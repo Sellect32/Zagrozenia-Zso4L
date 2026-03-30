@@ -1,10 +1,10 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f0f2f5;
 }
 
-/* Навигация */
 nav {
     background: #2c3e50;
     text-align: center;
@@ -33,12 +33,10 @@ nav h1 {
     color: #f1c40f;
 }
 
-/* Контейнер */
 .container {
     padding: 20px;
 }
 
-/* Карточки */
 .card {
     display: flex;
     align-items: center;
@@ -51,7 +49,6 @@ nav h1 {
     transition: transform 0.3s;
 }
 
-/* На ПК увеличиваем карточку при hover */
 @media(min-width: 769px) {
     .card:hover {
         transform: scale(1.02);
@@ -77,10 +74,10 @@ nav h1 {
     object-fit: cover;
 }
 
-/* Скрытый текст – теперь всегда раскрыт на мобильных */
+/* Текст всегда виден */
 .extra,
 .dzialania {
-    max-height: 300px; /* раскрыто по умолчанию */
+    max-height: 300px;
     overflow: hidden;
     margin-top: 10px;
 }
@@ -93,25 +90,25 @@ footer {
     padding: 15px;
 }
 
-/* Адаптив */
+/* Адаптация для планшетов и телефонов */
 @media (max-width: 768px) {
     .card {
-        flex-direction: column;
+        flex-direction: column; /* текст сверху, картинка снизу */
         align-items: flex-start;
     }
 
     .img-wrapper {
-        width: 100%;
-        height: 150px;
+        width: 100%;           /* картинка на всю ширину */
+        height: 180px;
         margin-left: 0;
         margin-top: 10px;
     }
 
     .menu {
-        flex-direction: column;
+        flex-direction: column; /* меню столбиком */
     }
 
     .menu a {
-        margin: 5px 0;
+        margin: 8px 0;
     }
 }
